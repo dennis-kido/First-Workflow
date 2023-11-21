@@ -11,5 +11,4 @@ jobs:
         run: |
           node -v
           npm -v
-          update
-          upgrade -y
+          
