@@ -1,0 +1,15 @@
+name: First Workflow
+on: [push]
+
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo a string
+        run : echo "Staring the first job"
+      - name: Multi-Line run-shell-commands
+        run: |
+          node -v
+          npm -v
+          update
+          upgrade -y
