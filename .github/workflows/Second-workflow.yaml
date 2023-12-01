@@ -18,7 +18,7 @@ jobs:
         runs-on: ubuntu-latest
         needs: [build]
         steps:
-         - name: Check npm version
+         - name: Check dependancies version
            run: |
                  npm -v
                  echo " npm version checked!"
