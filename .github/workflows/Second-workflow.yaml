@@ -31,3 +31,9 @@ jobs:
         steps:
          - name: Display Error Message
            run: echo "::error::No variable identified"
+        
+         - name: Display Warning Message
+           run: echo "::warning::No variable identified"
+         
+         - name: Display Notice Message
+           run: echo "::Notice::No variable identified"
