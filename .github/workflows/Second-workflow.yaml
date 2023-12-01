@@ -24,3 +24,10 @@ jobs:
                  echo "$(npv -v)"
                  node -v
                  apache2 -v
+    
+    Passing_error_message:
+        runs-on: ubuntu-latest
+        needs: [Check_dependancies]
+        steps:
+         - name: Display Error Message
+           run: echo "::error::No variable identified"
