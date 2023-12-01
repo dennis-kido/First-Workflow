@@ -6,7 +6,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
            - name: Install npm
-             run: npm install
+             run: npm ci
 
            - name: Check npm version
              run: |
