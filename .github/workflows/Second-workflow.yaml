@@ -21,6 +21,6 @@ jobs:
          - name: Check dependancies version
            run: |
                  npm -v
-                 echo " npm version checked!"
+                 echo "$(npv -v)"
                  node -v
                  apache2 -v
