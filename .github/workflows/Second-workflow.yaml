@@ -9,7 +9,7 @@ jobs:
              run: sudo apt install npm
 
            - name: Install docker
-             run: sudo install docker.io
+             run: sudo apt install docker.io
 
            - name: Check npm version
              run: |
