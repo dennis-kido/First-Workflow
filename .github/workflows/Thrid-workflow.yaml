@@ -1,0 +1,14 @@
+name: Third Workflow
+on: [push]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Shell variables
+              run: |
+                 pwd
+                 la -lart
+                 echo $GITHUB_SHA
+                 echo $GITHUB_REPOSITORY
+                 echo $GITHUB_WORKSPACE
