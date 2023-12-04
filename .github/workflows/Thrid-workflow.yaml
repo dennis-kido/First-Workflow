@@ -8,7 +8,14 @@ jobs:
             - name: Shell variables
               run: |
                  pwd
-                 la -lart
-                 echo $GITHUB_SHA
-                 echo $GITHUB_REPOSITORY
-                 echo $GITHUB_WORKSPACE
+                 mkdir Hello
+                 ls -larti
+                 echo "Done!"
+    Step_two:
+        runs-on: ubuntu-latest
+        steps:
+            - name: More-shell-cmd
+              run:
+                echo $GITHUB_SHA
+                echo $GITHUB_REPOSITORY
+                echo $GITHUB_WORKSPACE
