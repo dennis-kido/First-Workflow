@@ -1,0 +1,22 @@
+name: Repository-Work-Flow
+on: [push,fork,pull_request,issues]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check repository status
+              run: |
+               pwd  
+               ls -lrta
+            - name: Checkout
+              uses: actions/checkout@v4
+
+    Check-repository:
+        runs-on: ubuntu-latest
+        needs: [build]
+        steps:
+            - name: Check-repository-after-checkout
+              run: |
+                pwd
+                ls -lrta
