@@ -1,0 +1,28 @@
+name: Checkout
+on: [push]
+
+jobs:
+  checkout-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List files before
+        run: ls -lrtias
+      - uses: actions/checkout@v3
+      - name: Check files after
+        run: ls -lrt
+    
+  Get-repository:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check-available-files
+        run: |
+           pwd
+           ls -lrtia
+      - name: Create-local-repository
+        run: |
+            git init
+            git remote add origin https://github.com/Dennis-kiki/company-website.git
+            git fetch
+            git checkout main
+      - name: Check-local-repository
+        run: ls -lrtia
