@@ -9,7 +9,7 @@ jobs:
         run: ls -lrtias
       - uses: actions/checkout@v3
       - name: Check files after
-        run: ls -lrt
+        run: ls -lrtai
     
   Get-repository:
     runs-on: ubuntu-latest
