@@ -1,0 +1,29 @@
+name: Event-Activity-Type
+on:
+    push:
+    pull_request:
+        types: [opened,assigned,reopened,synchronize]
+    issues:
+        types: [opened]
+    
+jobs:
+    build:
+        runs-on: ubuntu:latest
+        steps:
+            - name: Check-dir and file before
+              run: |
+                pwd
+                ls -lrtia
+                echo $GITHUB_SHA
+                echo $GITHUB_REF
+            - name: Check-out
+              run: actions/checkour@v3
+
+    Check:
+        runs-on: ubuntu-latest
+        needs: [build]
+        steps:
+            - name: After-Checkout
+              run: |
+                pwd
+                ls -lrtia
